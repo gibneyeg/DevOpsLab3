@@ -43,4 +43,4 @@ jobs:
           name: Deploy Application
           shell: /bin/bash
           command: |
-            d ssh -o StrictHostKeyChecking=no ${EC2_USERNAME}@${EC2_PUBLIC_DNS} "rm -rf DevOpsLab3/;git clone https://github.com/gibneyeg/DevOpsLab3.git; source DevOpsLab3/deploy.sh"
+            ssh -o StrictHostKeyChecking=no ${EC2_USERNAME}@${EC2_PUBLIC_DNS} "rm -rf DevOpsLab3/;git clone https://github.com/gibneyeg/DevOpsLab3.git; source DevOpsLab3/deploy.sh"
